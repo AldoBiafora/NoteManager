@@ -1,0 +1,58 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <img class="img-position" src="../../../assets/logo-note-manager.png" alt="" height="100" width="100">
+        <mat-list class="list-custom">
+            <mat-list-item>
+                <a mat-button [routerLink]="'./notes'" [routerLinkActive]="['is-active']">
+                    Note
+                </a>
+            </mat-list-item>
+            <mat-list-item>
+                <a mat-button [routerLink]="'./users'" [routerLinkActive]="['is-active']">
+                    Utenti
+                </a>
+            </mat-list-item>
+           <!--  <mat-list-item *ngIf="isAdmin">
+                <a mat-button [routerLink]="'./charts'" [routerLinkActive]="['is-active']">
+                    Grafici
+                </a>
+            </mat-list-item>
+            <mat-list-item>
+                <a mat-button [routerLink]="'./categories'" [routerLinkActive]="['is-active']">
+                    Categorie
+                </a>
+            </mat-list-item>
+            <mat-list-item *ngIf="isAdmin">
+                <a mat-button [routerLink]="'./users'" [routerLinkActive]="['is-active']">
+                    Utenti
+                </a>
+            </mat-list-item>
+            <mat-list-item *ngIf="isAdmin">
+                <a mat-button  [routerLink]="'./settings'" [routerLinkActive]="['is-active']">
+                    Impostazioni
+                </a>
+            </mat-list-item> -->
+        </mat-list>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+        <mat-toolbar class="toolbar">
+            <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+              <mat-icon>menu</mat-icon>
+            </button>
+           <img src="../../../assets/logo-note-manager.png" width="100px" height="100px" alt="">
+            <button mat-icon-button type="button" (click)="logout()">
+                <mat-icon title="logout">logout</mat-icon>
+            </button>  
+        </mat-toolbar>
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+  <div class="position-foot">
+
+    <!-- <footer class="text-center footer">
+      <p class="text-footer">Note Manager ©2022-2023</p>
+    </footer> -->
+  </div>
+  </mat-drawer-container>

@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+    padding: 10px;
+}
+
+.margin-x-10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    .spinner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 50vh;
+          width: 100%;
+    }
+}
